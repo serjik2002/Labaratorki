@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?>
+
+<smartphones xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <!-- Вставляем XSL прямо в XML -->
+    <xsl:stylesheet id="stylesheet" version="1.0">
+        <xsl:template match="/">
+            <html>
+                <head>
+                    <title>Smartphone List</title>
+                    <style>
+                        table {
+                            border-collapse: collapse;
+                            width: 100%;
+                            font-family: Arial, sans-serif;
+                        }
+                        th, td {
+                            border: 1px solid #ddd;
+                            padding: 8px;
+                            text-align: left;
+                        }
+                        th {
+                            background-color: #f2f2f2;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Smartphone List</h1>
+                    <table>
+                        <tr>
+                            <th>Model</th>
+                            <th>Brand</th>
+                            <th>OS</th>
+                            <th>Year</th>
+                            <th>Rating</th>
+                        </tr>
+                        <xsl:for-each select="smartphones/smartphone">
+                            <tr>
+                                <td><xsl:value-of select="model"/></td>
+                                <td><xsl:value-of select="brand"/></td>
+                                <td><xsl:value-of select="os"/></td>
+                                <td><xsl:value-of select="release_year"/></td>
+                                <td><xsl:value-of select="rating"/></td>
+                            </tr>
+                        </xsl:for-each>
+                    </table>
+                </body>
+            </html>
+        </xsl:template>
+    </xsl:stylesheet>
+
+    <!-- Данные о смартфонах -->
+    <smartphone>
+        <model>iPhone 15 Pro</model>
+        <brand>Apple</brand>
+        <os>iOS 17</os>
+        <release_year>2023</release_year>
+        <rating>9.5</rating>
+    </smartphone>
+    <smartphone>
+        <model>Galaxy S23 Ultra</model>
+        <brand>Samsung</brand>
+        <os>Android 13</os>
+        <release_year>2023</release_year>
+        <rating>9.3</rating>
+    </smartphone>
+    <smartphone>
+        <model>Pixel 8 Pro</model>
+        <brand>Google</brand>
+        <os>Android 14</os>
+        <release_year>2023</release_year>
+        <rating>9.0</rating>
+    </smartphone>
+    <smartphone>
+        <model>Xiaomi 13 Pro</model>
+        <brand>Xiaomi</brand>
+        <os>Android 13</os>
+        <release_year>2023</release_year>
+        <rating>8.8</rating>
+    </smartphone>
+    <smartphone>
+        <model>OnePlus 11</model>
+        <brand>OnePlus</brand>
+        <os>Android 13</os>
+        <release_year>2023</release_year>
+        <rating>8.7</rating>
+    </smartphone>
+</smartphones>

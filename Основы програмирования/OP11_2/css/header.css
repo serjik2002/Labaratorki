@@ -1,0 +1,48 @@
+.header{
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #004346;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px ;
+}
+.menu{
+    
+    list-style: none;
+    font-family: roboto;
+    font-size: 24px;
+    padding: 5px;
+    text-align: right;
+    min-width: 1500px;
+}
+
+.menu li{
+    display: inline;
+    margin-right: 80px;
+}
+
+body{
+    margin: 0;
+    font-family: roboto;
+    font-size: 20px;
+}
+.logo{
+    margin-left: 170px;
+    margin-top: 33px;
+    float: left;
+}
+
+a:link{
+    text-decoration: none;
+    color: #81c6e4;
+}
+a:visited{
+    color:#81c6e4;
+}
+a:hover{
+    text-decoration: underline; 
+}
+body{
+    background-color: #ffffff;
+}

@@ -1,0 +1,111 @@
+/*Главная разметка*/
+.main{
+    margin-top: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 960px;
+    border-width: 3px;
+}
+.main h1{
+    text-align: center;
+}
+li{
+    list-style: none; 
+}
+.main ul{
+    margin: 0;
+    padding: 0;
+}
+/**/
+.list_element{
+    width: 960px;
+    height: 260px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+ /*Галерея*/
+.list_image{
+    width: 467px;
+    height: 260px;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+.list_paragraph{
+    width: 467px;
+    height: 260px;
+    float: right;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    text-align: justify;
+}
+.second_list_image{
+    width: 467px;
+    height: 260px;
+    margin: 0;
+    padding: 0;
+    margin-left: 26px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.second_list_paragraph{
+    width: 467px;
+    height: 260px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    text-align: justify;
+}
+/*Об авторе*/
+.myPhoto{
+    text-align: center;
+}
+/*Галерея и панорамы*/
+.myPhoto img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.gallery_element img{
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+.gallery_element li{
+    width: 960px;
+    text-align: center;
+}
+.panorama_element img{
+    width: 960px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/*Социальные сети*/
+.contact{
+    text-align: center;
+    font-size: 24px;
+}
+
+/*кнопка вверх*/
+.buttonUp img{
+     width: 70px;
+     height: 70px;
+     opacity: 20%;  
+}
+.buttonUp{
+    position: sticky;
+    bottom: 30px;
+    margin-left: 94%;
+    margin-bottom: 30px;
+}

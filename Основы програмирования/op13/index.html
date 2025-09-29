@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+  <script src="index.js"></script>
+</head>
+<body>
+  <form class="form" id="form">
+    <div class="container">
+      <h1>Регистрация</h1>
+      <p>Пожалуйста, заполните форму для регистрации.</p>
+      <hr>
+
+      <p>* - обязательные поля</p>
+      <div class="NameSurname">
+        <div class="nameSelector">
+          <label for="name"><b>Имя*</b></label>
+          <input type="text" placeholder="Введите имя" name="name" id="name" onblur="nameValidate()">
+        </div>
+
+        <div class="surname">
+          <label for="surname"><b>Фамилия*</b></label>
+          <input type="text" placeholder="Введите фамилию" name="surname" id="surname" onblur="surnameValidate()" >
+        </div>
+      </div>
+
+      <label for="number"><b>Номер телефона*</b></label>
+      <input type="text" placeholder="Введите номер телефона" name="number" id="number" onblur="numberValidate()">
+
+      <label for="email"><b>Почта*</b></label>
+      <input type="text" placeholder="Введите почту" name="email" id="email" onblur="emailValidate()">
+
+     <div class="country">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Ваша страна</option>
+        <option value="1">Украина</option>
+        <option value="2">Россия</option>
+        <option value="3">Белорусь</option>
+        <option value="4">Молдова</option>
+        <option value="5">Турция</option>
+      </select>
+     </div>
+     
+     <form>
+      <p><b>Укажите вашу стать</b></p>
+       <p><input name="man" type="radio" value="man" > Мужчина</p>
+       <p><input name="woman" type="radio" value="woman"> Женщина</p>
+       <p><input name="unset" type="radio" value="unset"> Не желаю указывать</p>
+     </form>
+
+     <label for="age"><b>Возраст</b></label>
+      <input type="number" placeholder="Введите возраст" name="age" id="age" min="0" max="150">
+  
+
+      <label for="psw"><b>Пароль*</b></label>
+      <input type="password" placeholder="Введите пароль" name="psw" id="psw" onblur="passwordValidate()">
+  
+      <label for="psw-repeat"><b>Повторите пароль*</b></label>
+      <input type="password" placeholder="Введите пароль еще раз" name="psw-repeat" id="psw_repeat" onblur="passwordRepeatValidate()">
+      <hr>
+  
+      <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="#">Условиями и конфиденциальностью.</a>.</p>
+      
+      <button class="clearbtn" type="button" id="button" onclick="cleanForm()" >Отчистить форму</button>
+      
+      <button type="submit" class="registerbtn" onclick="formValidate()">Зарегестрироватся</button>
+ 
+    </div>
+  
+    <div class="container signin">
+      <p>Уже имеете аккаунт? <a href="#">Войти</a>.</p>
+    </div>
+  </form>
+</body>
+</html>

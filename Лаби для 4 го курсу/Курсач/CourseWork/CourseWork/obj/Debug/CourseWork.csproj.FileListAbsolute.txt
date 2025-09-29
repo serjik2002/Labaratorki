@@ -1,0 +1,9 @@
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\bin\Debug\CourseWork.exe.config
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\bin\Debug\CourseWork.exe
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\bin\Debug\CourseWork.pdb
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.AssemblyReference.cache
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\obj\Debug\CourseWork.Properties.Resources.resources
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.GenerateResource.cache
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CoreCompileInputs.cache
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\obj\Debug\CourseWork.exe
+E:\Labaratorki\Лаби для 4 го курсу\Курсач\CourseWork\CourseWork\obj\Debug\CourseWork.pdb

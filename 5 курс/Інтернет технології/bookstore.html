@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .book {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body itemscope itemtype="http://schema.org/BookStore">
+  <h1 itemprop="name">The Book Haven</h1>
+  <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    Address: <span itemprop="streetAddress">456 Literature Lane</span>,
+    <span itemprop="addressLocality">Novel Town</span>,
+    <span itemprop="addressRegion">NY</span>,
+    <span itemprop="postalCode">67890</span>
+  </p>
+  <p>Contact us: <span itemprop="telephone">+1-800-BOOKS-99</span></p>
+
+  <h2>Books</h2>
+  <div class="book" itemscope itemtype="http://schema.org/Book">
+    <h3 itemprop="name">The Great Adventure</h3>
+    <p>Author: <span itemprop="author">John Explorer</span></p>
+    <p>Description: <span itemprop="description">A thrilling journey through unknown lands.</span></p>
+    <p>Price: $<span itemprop="price">15.99</span></p>
+    <p>Rating: <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+        <span itemprop="ratingValue">4.8</span>/5 based on
+        <span itemprop="reviewCount">250</span> reviews
+      </span></p>
+  </div>
+
+  <div class="book" itemscope itemtype="http://schema.org/Book">
+    <h3 itemprop="name">Mystery of the Old Library</h3>
+    <p>Author: <span itemprop="author">Emily Page</span></p>
+    <p>Description: <span itemprop="description">An intriguing mystery set in an ancient library.</span></p>
+    <p>Price: $<span itemprop="price">12.50</span></p>
+    <p>Rating: <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+        <span itemprop="ratingValue">4.6</span>/5 based on
+        <span itemprop="reviewCount">180</span> reviews
+      </span></p>
+  </div>
+</body>
+
+</html>

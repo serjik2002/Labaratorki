@@ -1,0 +1,63 @@
+module GraphMergeMatrix
+
+types
+  VertexId = Text  (* Ідентифікатор вершини — це текстове ім'я *)
+  Weight = Int     (* Навантаження на вершини — це цілі числа *)
+
+  (* Визначення вершини з ідентифікатором та навантаженням *)
+  Vertex :: id : VertexId
+            weight : Weight
+
+  (* Матриця суміжності для представлення графу *)
+  AdjacencyMatrix = VertexId × VertexId → Bool  (* True, якщо ребро існує, False — ні *)
+
+  (* Граф як структура, що містить вершини та матрицю суміжності *)
+  Graph :: vertices : Vertex-set
+            edges : AdjacencyMatrix
+
+values
+  (* Функція для об'єднання двох графів з урахуванням пріоритетів *)
+  mergeGraphs: Graph × Graph → Graph
+  mergeGraphs(g1, g2) as mergedGraph post exists v: mergedGraph.vertices • true ==
+    let
+      (* Проміжна змінна: вершини з графа G1 мають пріоритет *)
+      mergedVertices: Vertex-set = g1.vertices ∪ { v | v : g2.vertices • not exists v' : g1.vertices • v'.id = v.id }
+
+      (* Проміжна змінна: ребра з графа G2 мають пріоритет *)
+      mergedEdges: AdjacencyMatrix = 
+        { (from, to) → true | (from, to) : g2.edges • true } ∪
+        { (from, to) → true | (from, to) : g1.edges • not exists (from', to') : g2.edges • from' = from ∧ to' = to }
+
+      (* Остаточний граф — це об'єднання вершин та ребер з урахуванням пріоритетів *)
+      mergedGraph: Graph = Graph(mergedVertices, mergedEdges)
+
+    in mergedGraph
+
+  (* Приклад вершин *)
+  vA: Vertex = mkVertex("A", 10)
+  vB: Vertex = mkVertex("B", 15)
+  vC: Vertex = mkVertex("C", 5)
+  vD: Vertex = mkVertex("D", 12)
+
+  (* Приклад графів *)
+  g1: Graph = Graph(
+    {vA, vB, vC},  (* Вершини графа G1 *)
+    { ("A", "B") → true,  (* Ребро A -> B *)
+      ("B", "C") → true } (* Ребро B -> C *)
+  )
+
+  g2: Graph = Graph(
+    {vA, vB, vD},  (* Вершини графа G2 *)
+    { ("A", "B") → true,  (* Ребро A -> B *)
+      ("C", "D") → true } (* Ребро C -> D *)
+  )
+
+  (* Виведення результату злиття графів *)
+  resultGraph: Graph = mergeGraphs(g1, g2)
+
+  (* Операції для визначення вершин та ребер *)
+  mkVertex: VertexId × Weight → Vertex
+  mkVertex(id, weight) == Vertex(id, weight)
+
+  mkEdge: VertexId × VertexId → Bool
+  mkEdge(from, to) == true  (* Ребро існує *)

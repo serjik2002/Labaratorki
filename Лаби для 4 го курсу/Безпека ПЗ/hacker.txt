@@ -1,0 +1,12 @@
+https://dorksearch.com/
+https://dnsdumpster.com/
+https://www.tutorialspoint.com/google_hacking_tests.htm
+https://www.exploit-db.com/google-hacking-database
+https://vuldb.com/ru/?googlehacking
+https://dorks.faisalahmed.me/#
+https://github.com/redduxi/Google-Dorks-Resources
+https://gbhackers.com/latest-google-dorks-list/
+https://hackersonlineclub.com/google-hacking/
+https://kathan19.gitbook.io/howtohunt/sensitive-info-leaks/github-dorks
+https://pentest-tools.com/alltools#information-gathering
+https://github.com/techgaun/github-dorks
